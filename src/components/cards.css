@@ -1,0 +1,34 @@
+/* file: components/cards.css */
+
+@layer components {
+
+  /* ─── Base ─────────────────────────────────────────── */
+  .card {
+    padding: var(--spacing-block);
+    border-radius: var(--radius-card);
+    background-color: var(--ft-color-background);
+    width: 100%;
+  }
+
+  /* ─── Variantes de tamaño ───────────────────────────── */
+  .card-xs { max-width: var(--ft-card-xs); }
+  .card-sm { max-width: var(--ft-card-sm); }
+  .card-md { max-width: var(--ft-card-md); }
+  .card-lg { max-width: var(--ft-card-lg); }
+  .card-xl { max-width: var(--ft-card-xl); }
+
+  /* ─── Variantes de estilo ───────────────────────────── */
+  .card-outline {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--color-neutral-300);
+    background-color: transparent;
+  }
+
+  .card-elevated {
+    box-shadow:
+      0 4px 6px -1px oklch(0 0 0 / 0.1),
+      0 2px 4px -2px oklch(0 0 0 / 0.1);
+  }
+
+}

@@ -1,0 +1,74 @@
+/* file: layouts/section.css */
+
+@layer layouts {
+
+    section {
+        @apply @container w-full px-[var(--ft-padding-content-x)] py-[calc(var(--ft-padding-content-y)/2)];
+    }
+
+    section > div  {
+        @apply mx-auto w-full max-w-[var(--ft-container)] flex flex-col gap-[var(--ft-gap-content)];
+    }
+
+    section > div > div {
+        @apply w-full;
+    }
+
+    main > section:first-child:not(.has-background) {
+    @apply pt-[var(--ft-padding-content-y)];
+  }
+
+  main > section:last-child:not(.has-background) {
+    @apply pb-[var(--ft-padding-content-y)];
+  }
+
+  section:first-of-type:not(.has-background) {
+    @apply pt-[var(--ft-padding-content-y)];
+  }
+
+  section:last-of-type:not(.has-background) {
+    @apply pb-[var(--ft-padding-content-y)];
+  }
+
+  section.has-background {
+    @apply py-[var(--ft-padding-content-y)];
+  }
+
+  section.has-background + section:not(.half-top) {
+    @apply pt-[var(--ft-padding-content-y)];
+  }
+
+  /* NOTE: :has() may not be supported everywhere. If unsupported, this rule is ignored. */
+  section:not(.half-bottom):has(+ section.has-background) {
+    @apply pb-[var(--ft-padding-content-y)];
+  }
+
+  /* Prevent this rule from overriding half-top */
+  header + section:not(.has-background):not(.half-top) {
+    @apply pt-[var(--ft-padding-content-y)];
+  }
+
+  /* Half padding (safe: no :has() in selector lists) */
+  section.half-top,
+  section.half-top:first-of-type:not(.has-background) {
+    @apply pt-[calc(var(--ft-padding-content-y)/2)];
+  }
+
+  section.half-bottom,
+  section.half-bottom:last-of-type:not(.has-background) {
+    @apply pb-[calc(var(--ft-padding-content-y)/2)];
+  }
+  
+  .block-bleed {
+    @apply w-screen max-w-none relative left-1/2 -translate-x-1/2 flex-none;
+  }
+
+  #brx-content {
+    @apply w-full flex flex-col;
+  }
+
+  .single-product .product {
+    @apply flex-nowrap;
+  }
+
+}

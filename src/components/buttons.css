@@ -1,0 +1,86 @@
+/* file: buttons.css */
+
+@layer components {
+
+  /* ─── Base ─────────────────────────────────────────── */
+  .btn {
+    @apply flex overflow-hidden relative items-center justify-center
+           font-semibold rounded-button transition min-w-fit gap-2 duration-normal
+           py-[var(--btn-py)] px-[var(--btn-px)];
+  }
+
+  .btn:focus {
+    @apply outline-none;
+  }
+
+  .btn:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+
+  .btn:hover {
+    @apply scale-105;
+  }
+
+  /* ─── Variantes de color ────────────────────────────── */
+  .btn-light {
+    @apply bg-neutral-100 text-neutral-800 border border-neutral-100;
+  }
+
+  .btn-dark {
+    @apply bg-neutral-700 text-neutral-100 border border-neutral-700;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 border border-primary-500 text-[var(--btn-primary-color)];
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 border border-secondary-500 text-[var(--btn-secondary-color)];
+  }
+
+  .btn-outline {
+    @apply bg-[var(--btn-outline-bg)] border border-[var(--btn-outline-border)] text-[var(--btn-outline-color)];
+  }
+
+  .btn-outline:hover {
+    @apply duration-500 shadow-lg;
+  }
+
+  .btn-link {
+    @apply bg-transparent text-neutral-800 border-0 pl-0;
+  }
+
+  /* ─── Variantes de forma ────────────────────────────── */
+  .btn-rounded {
+    @apply rounded-full;
+  }
+
+  /* ─── Variantes de tamaño ───────────────────────────── */
+  .btn-xs { @apply text-xs; }
+  .btn-sm { @apply text-sm; }
+  .btn-lg { @apply text-lg; }
+  .btn-xl { @apply text-xl; }
+
+  /* ─── Otras variaciones ─────────────────────────────── */
+  .btn-wide {
+    @apply px-[calc(var(--btn-px)*1.5)];
+  }
+
+  .btn-block {
+    @apply w-full;
+  }
+
+  .btn-circle {
+    @apply rounded-full aspect-square p-[var(--btn-py)];
+  }
+
+  /* ─── Botones de formulario ─────────────────────────── */
+  button[type="submit"] {
+    @apply flex overflow-hidden relative items-center justify-center
+           font-normal rounded-button transition min-w-fit gap-2
+           bg-primary-500 border border-primary-500
+           py-[var(--btn-py)] px-[var(--btn-px)]
+           text-[var(--btn-primary-color)];
+  }
+
+}

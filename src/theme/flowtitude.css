@@ -1,0 +1,190 @@
+/**
+ * Flowtitude Design System - Theme Configuration
+ * Editado desde Flowtitude → Design System
+ */
+
+@layer base {
+  :root {
+    /* ============================================================
+       1) RANGES / KNOBS (configuration only)
+       ============================================================ */
+
+    /* Viewport range */
+    --viewport-min: 410px;
+    --viewport-max: 1280px;
+
+    /* Base typography */
+    --ft-text-min: 1rem;
+    --ft-text-max: 1.125rem;
+    --ft-type-step-min: 1.125;
+    --ft-type-step-max: 1.2;
+    --ft-text-factor: 1;
+
+    /* Base spacing */
+    --ft-space-min: 0.5rem;
+    --ft-space-max: 1.5rem;
+    --ft-space-step-min: 1.3;
+    --ft-space-step-max: 1.5;
+    --ft-space-factor: 1;
+
+    /* Semantic spacing multipliers */
+    --ft-space-factor-inner: 0.5;
+    --ft-space-factor-content: 0.75;
+    --ft-space-factor-stack: 1;
+    --ft-space-factor-block: 1;
+    --ft-space-factor-columns: 1.5;
+    --ft-space-factor-section: 3;
+    --ft-space-factor-hero: 4.5;
+
+    /* Layout defaults */
+    --ft-container: min(var(--container-7xl), 90%);
+    --ft-padding-content-x: 1rem;
+    --ft-padding-content-y: var(--spacing-section);
+    --ft-gap-content: var(--spacing-block);
+
+    /* Base colors */
+    --ft-color-text: #000;
+    --ft-color-background: #f9ecec;
+
+    /* Card widths */
+    --ft-card-xs: 12rem;
+    --ft-card-sm: 14rem;
+    --ft-card-md: 18rem;
+    --ft-card-lg: 24rem;
+    --ft-card-xl: 36rem;
+
+    /* Buttons */
+    --btn-primary-color: var(--color-neutral-100);
+    --btn-secondary-color: var(--color-neutral-100);
+    --btn-outline-bg: transparent;
+    --btn-outline-border: currentColor;
+    --btn-outline-color: var(--color-neutral-800);
+    --btn-py: 0.6em;
+    --btn-px: 1.75em;
+
+    /* ============================================================
+       2) DERIVED VALUES (computed from knobs)
+       ============================================================ */
+
+    --ft-fluid-t: calc(
+      (100vw - var(--viewport-min)) /
+      (var(--viewport-max) - var(--viewport-min))
+    );
+
+    --ft-text-value: clamp(
+      var(--ft-text-min),
+      calc(var(--ft-text-min) + (var(--ft-text-max) - var(--ft-text-min)) * var(--ft-fluid-t)),
+      var(--ft-text-max)
+    );
+
+    --ft-type-step: clamp(
+      var(--ft-type-step-min),
+      calc(var(--ft-type-step-min) + (var(--ft-type-step-max) - var(--ft-type-step-min)) * var(--ft-fluid-t)),
+      var(--ft-type-step-max)
+    );
+
+    --ft-space-value: clamp(
+      var(--ft-space-min),
+      calc(var(--ft-space-min) + (var(--ft-space-max) - var(--ft-space-min)) * var(--ft-fluid-t)),
+      var(--ft-space-max)
+    );
+
+    --ft-space-step: clamp(
+      var(--ft-space-step-min),
+      calc(var(--ft-space-step-min) + (var(--ft-space-step-max) - var(--ft-space-step-min)) * var(--ft-fluid-t)),
+      var(--ft-space-step-max)
+    );
+  }
+}
+
+@theme {
+
+    /* Fonts */
+    --font-body: Arial, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    --font-display: var(--font-body);
+
+    /* Palette - Secondary */
+    --color-secondary-50: oklch(0.969 0.002 18.01);
+    --color-secondary-100: oklch(0.927 0.007 17.53);
+    --color-secondary-200: oklch(0.862 0.01 17.51);
+    --color-secondary-300: oklch(0.786 0.017 17.61);
+    --color-secondary-400: oklch(0.719 0.022 17.74);
+    --color-secondary-500: oklch(0.64 0.031 18.02);
+    --color-secondary-600: oklch(0.569 0.036 18.28);
+    --color-secondary-700: oklch(0.493 0.029 18.21);
+    --color-secondary-800: oklch(0.42 0.025 18.21);
+    --color-secondary-900: oklch(0.292 0.015 18.07);
+    --color-secondary-950: oklch(0.23 0.011 18.02);
+
+    /* Palette - Primary */
+    --color-primary-50: oklch(0.9700 0.0255 27.19);
+    --color-primary-100: oklch(0.9400 0.0428 27.19);
+    --color-primary-200: oklch(0.8700 0.0765 27.19);
+    --color-primary-300: oklch(0.8000 0.1056 27.19);
+    --color-primary-400: oklch(0.7000 0.1432 27.19);
+    --color-primary-500: oklch(0.5365 0.1984 27.19);
+    --color-primary-600: oklch(0.4963 0.1938 27.19);
+    --color-primary-700: oklch(0.4517 0.1884 27.19);
+    --color-primary-800: oklch(0.3916 0.1805 27.19);
+    --color-primary-900: oklch(0.3192 0.1698 27.19);
+    --color-primary-950: oklch(0.2505 0.1579 27.19);
+
+    /* Flat defaults */
+    --color-secondary: var(--color-secondary-500);
+    --color-primary: oklch(0.5365 0.1984 27.19);
+
+    /* Leading */
+    --leading-none: 1em;
+    --leading-tight: 1.2em;
+    --leading-snug: 1.375em;
+    --leading-normal: 1.5em;
+    --leading-relaxed: 1.625em;
+    --leading-loose: 2em;
+
+    /* Radius */
+    --radius-button: var(--radius-sm);
+    --radius-card: var(--radius-md);
+    --radius-section: var(--radius-md);
+
+    /* Aspect ratios */
+    --aspect-rrss: 1.91 / 1;
+    --aspect-wide: 18 / 8;
+    --aspect-ultrawide: 18 / 5;
+    --aspect-golden: 1.618 / 1;
+    --aspect-portrait: 3 / 4;
+    --aspect-landscape: 4 / 3;
+
+    /* Typography scale (computed) */
+    --text-base: calc(var(--ft-text-value) * var(--ft-text-factor));
+    --text-sm: calc(var(--text-base) / var(--ft-type-step));
+    --text-xs: calc(var(--text-sm) / var(--ft-type-step));
+    --text-lg: calc(var(--text-base) * var(--ft-type-step));
+    --text-xl: calc(var(--text-lg) * var(--ft-type-step));
+    --text-2xl: calc(var(--text-xl) * var(--ft-type-step));
+    --text-3xl: calc(var(--text-2xl) * var(--ft-type-step));
+    --text-4xl: calc(var(--text-3xl) * var(--ft-type-step));
+    --text-5xl: calc(var(--text-4xl) * var(--ft-type-step));
+    --text-6xl: calc(var(--text-5xl) * var(--ft-type-step));
+    --text-7xl: calc(var(--text-6xl) * var(--ft-type-step));
+    --text-8xl: calc(var(--text-7xl) * var(--ft-type-step));
+    --text-9xl: calc(var(--text-8xl) * var(--ft-type-step));
+
+    /* Spacing scale (computed) */
+    --spacing: 0.25rem;
+
+    --spacing-fluid-md: calc(var(--ft-space-value) * var(--ft-space-factor));
+    --spacing-fluid-sm: calc(var(--spacing-fluid-md) / var(--ft-space-step));
+    --spacing-fluid-xs: calc(var(--spacing-fluid-sm) / var(--ft-space-step));
+    --spacing-fluid-lg: calc(var(--spacing-fluid-md) * var(--ft-space-step));
+    --spacing-fluid-xl: calc(var(--spacing-fluid-lg) * var(--ft-space-step));
+    --spacing-fluid-2xl: calc(var(--spacing-fluid-xl) * var(--ft-space-step));
+
+    /* Semantic spacing (computed) */
+    --spacing-inner: calc(var(--spacing-fluid-xs) * var(--ft-space-factor-inner));
+    --spacing-content: calc(var(--spacing-fluid-sm) * var(--ft-space-factor-content));
+    --spacing-stack: calc(var(--spacing-fluid-sm) * var(--ft-space-factor-stack));
+    --spacing-block: calc(var(--spacing-fluid-md) * var(--ft-space-factor-block));
+    --spacing-columns: calc(var(--spacing-fluid-md) * var(--ft-space-factor-columns));
+    --spacing-section: calc(var(--spacing-fluid-xl) * var(--ft-space-factor-section));
+    --spacing-hero: calc(var(--spacing-fluid-2xl) * var(--ft-space-factor-hero));
+}

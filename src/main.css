@@ -1,0 +1,49 @@
+@layer theme, base, layouts, components, utilities, custom;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import './theme/flowtitude.css';
+
+@import './base/base.css';
+@import './base/typography.css';
+
+@import './layouts/section.css';
+@import './layouts/content-flex.css';
+
+@import './components/components.css';
+@import './components/typography.css';
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/custom.css';
+
+@import './utility/core/utilities.css';
+
+@import './utility/animations/durations.css';
+@import './utility/layout/grid-basic.css';
+
+
+@import "./wizard.css";
+
+
+@custom-variant parent (*:has(> &)); 
+/* Variante parent: selecciona el elemento padre que contiene este elemento como hijo directo */
+
+@custom-variant parent-hover (*:hover > &);
+/* variante parent-hover: dar estilo un elemento cuando se hace hover sobre su elemento padre  */
+
+@custom-variant parent-focus-within (*:focus-within > &);
+/* variante parent-focus-within : dar estilo un elemento cuando el elemento padre tiene el foco  */
+
+
+/* Plugins -------------------------------------- */
+/*
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@plugin 'tailwindcss-motion';
+@plugin 'tailwindcss-intersect';
+@plugin "tailwindcss-corner-shape/presets/squircle";
+@plugin 'fluid-tailwindcss';
+@plugin "tailwindcss-padded-radius";
+*/

@@ -1,0 +1,150 @@
+/* file: base/typography.css */
+
+/* Override Gutenberg's unlayered rule: a:where(:not(.wp-element-button)) { text-decoration: underline }
+   This must live OUTSIDE @layer to win the cascade against other unlayered styles. */
+a:where(:not(.wp-element-button)) {
+    text-decoration: none;
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply break-words font-display font-bold text-balance tracking-tight;
+    }
+
+    h1 {
+        @apply text-5xl leading-none tracking-wider;
+    }
+
+    h2 {
+        @apply text-4xl leading-none;
+    }
+
+    h3 {
+        @apply text-3xl leading-none;
+    }
+
+    h4 {
+        @apply text-2xl leading-tight;
+    }
+
+    h5 {
+        @apply text-xl leading-tight;
+    }
+
+    h6 {
+        @apply text-lg leading-tight;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    .prose {
+        h1 {
+            @apply text-4xl leading-none  mb-2 mt-4;
+        }
+
+        h2 {
+            @apply text-3xl leading-none mb-2 mt-4;
+        }
+
+        h3 {
+            @apply text-2xl leading-none my-2;
+        }
+
+        h4 {
+            @apply text-xl leading-tight my-2;
+        }
+
+        h5 {
+            @apply text-lg leading-tight my-2;
+        }
+
+        h6 {
+            @apply text-base leading-tight my-2;
+        }
+
+        a {
+            @apply text-primary-500 no-underline;
+        }
+
+        p > a:hover {
+            @apply underline;
+        }
+
+        p {
+            @apply my-4;
+        }
+
+        p + p {
+            @apply my-2;
+        }
+
+        h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, 
+        h2 + h3, h2 + h4, h2 + h5, h2 + h6, 
+        h3 + h4, h3 + h5, h3 + h6, 
+        h4 + h5, h4 + h6, 
+        h5 + h6 {
+            @apply mt-0;
+        }
+
+        p + img {
+            @apply max-w-full h-auto;
+        }
+
+        ul, ol {
+            @apply my-4 pl-5;
+        }
+
+        ul ul, ul ol, ol ul, ol ol {
+            @apply my-0;
+        }
+
+        li {
+            @apply list-disc my-2;
+        }
+
+        blockquote {
+            @apply border-l-4 border-secondary-500 pl-4 italic text-secondary-700 my-4;
+        }
+
+        table {
+            @apply text-base leading-tight my-4;
+
+            thead th {
+                @apply pr-4 pb-2 pl-4 text-left border-b-3 border-secondary-100;
+            }
+
+            thead th:first-child {
+                @apply pl-0;
+            }
+
+            thead th:last-child {
+                @apply pr-0;
+            }
+
+            tbody td,
+            tfoot td {
+                @apply pt-2 pr-4 pb-2 pl-4 border-b border-secondary-100;
+            }
+
+            tbody td:first-child,
+            tfoot td:first-child {
+                @apply pl-0;
+            }
+
+            tbody td:last-child,
+            tfoot td:last-child {
+                @apply pr-0;
+            }
+        }
+
+        > :first-child {
+            @apply mt-0;
+        }
+
+        > :last-child {
+            @apply mb-0;
+        }
+    }
+}

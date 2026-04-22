@@ -1,0 +1,68 @@
+/* file: components/typography.css */
+
+@layer components {
+    .display,
+    .display-lg {
+        @apply text-9xl font-display font-medium leading-none tracking-tight text-balance;
+        /* ~65px/75px - Tamaño heroico para impacto máximo */
+    }
+
+    .display-md {
+        @apply text-8xl font-display font-medium leading-none tracking-tight text-balance;
+        /* ~56px/65px - Estándar para displays, equilibrio perfecto */
+    }
+
+    .display-single,
+    .display-sm {
+        @apply text-7xl font-display font-medium leading-none tracking-tight text-balance;
+        /* ~49px/56px - Impacto controlado para contextos menores */
+    }
+
+    .heading-lg {
+        @apply text-6xl font-display font-medium leading-none tracking-tight text-balance;
+        /* ~43px/49px - Para estructurar contenido principal */
+    }
+    
+    .heading, 
+    .heading-md {
+        @apply text-5xl font-display font-medium leading-tight tracking-tight text-balance;
+        /* ~37px/43px - El comodín para la mayoría de títulos */
+    }
+
+    .heading-sm {
+        @apply text-4xl font-display font-medium leading-none tracking-tight text-balance;
+        /* ~32px/37px - Para crear subdivisiones claras */
+    }
+
+    .subheading-lg {
+        @apply text-3xl font-display font-semibold leading-none tracking-tight text-pretty;
+        /* ~28px/32px - Puente entre heading y contenido */
+    }
+
+    .subheading, 
+    .subheading-md {
+        @apply text-2xl font-display font-semibold leading-none text-pretty;
+        /* ~24px/28px - Versátil para múltiples contextos */
+    }
+
+    .subheading-sm {
+        @apply text-xl font-display font-semibold leading-none text-pretty;
+        /* ~21px/24px - Sutil pero efectivo */
+    }
+
+    .text-large {
+        @apply text-lg leading-snug text-pretty;
+        /* ~18px/21px - Para texto que debe destacar del cuerpo principal */
+    }
+
+    .text-medium {
+        @apply text-base font-body leading-normal text-pretty;
+        /* ~16px/18px - Base para la mayoría del contenido */
+    }
+
+    .text-small {
+        @apply text-sm font-body leading-relaxed;
+        /* ~14px/16px - Para información de apoyo */
+    }
+
+}

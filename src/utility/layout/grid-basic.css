@@ -1,0 +1,151 @@
+/* file: utility/layout/grid-basic.css */
+
+/* 3 columnas */
+@utility grid-cols-1-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-2-1 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+
+/* 4 columnas */
+@utility grid-cols-1-3 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+}
+
+@utility grid-cols-3-1 {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-2-1 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-1-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-2-1-1 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* 5 columnas */
+@utility grid-cols-1-4 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr);
+}
+
+@utility grid-cols-4-1 {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-2-3 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+}
+
+@utility grid-cols-3-2 {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-2-1-2 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-1-2-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-2-2-1 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-3-1 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-1-3 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 3fr);
+}
+
+@utility grid-cols-3-1-1 {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* 6 columnas */
+@utility grid-cols-1-3-2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-2-3-1 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-2-3 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 3fr);
+}
+
+@utility grid-cols-2-1-3 {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 3fr);
+}
+
+@utility grid-cols-3-2-1 {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-3-1-2 {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@utility grid-cols-1-4-1 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 1fr);
+}
+
+@utility grid-cols-1-1-4 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 4fr);
+}
+
+@utility grid-cols-4-1-1 {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+/* auto fill */
+@utility grid-auto-fill-xs {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--ft-card-xs), 100%), 1fr));
+    }
+
+@utility grid-auto-fill-sm {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--ft-card-sm), 100%), 1fr));
+    }
+
+@utility grid-auto-fill-md {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--ft-card-md), 100%), 1fr));
+    }
+
+@utility grid-auto-fill-lg {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--ft-card-lg), 100%), 1fr));
+    }
+
+@utility grid-auto-fill-xl {
+        grid-template-columns: repeat(auto-fill, minmax(min(var(--ft-card-xl), 100%), 1fr));
+    }
+
+/* auto fit */
+@utility grid-auto-fit-xs {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--ft-card-xs), 100%), 1fr));
+    }
+
+@utility grid-auto-fit-sm {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--ft-card-sm), 100%), 1fr));
+    }
+
+@utility grid-auto-fit-md {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--ft-card-md), 100%), 1fr));
+    }
+
+@utility grid-auto-fit-lg {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--ft-card-lg), 100%), 1fr));
+    }
+
+@utility grid-auto-fit-xl {
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--ft-card-xl), 100%), 1fr));
+    }

@@ -1,0 +1,25 @@
+/* file: utility/animations/duration.css */
+
+@utility duration-none {
+    transition-duration: 0s;
+}
+
+@utility duration-slower {
+    transition-duration: 500ms;
+}
+
+@utility duration-slow {
+    transition-duration: 400ms;
+}
+
+@utility duration-normal {
+    transition-duration: 300ms;
+}
+
+@utility duration-fast {
+    transition-duration: 200ms;
+}
+
+@utility duration-faster {
+    transition-duration: 100ms;
+}

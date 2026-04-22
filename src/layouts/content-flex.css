@@ -1,0 +1,55 @@
+/* file: layouts/content-flex.css */
+
+@layer layouts {
+
+    .content-flex {
+        @apply flex flex-col gap-content space-y-0;
+        @apply justify-center items-center ;
+    }
+
+    .content-flex.top-left {
+        @apply justify-start items-start;
+        @apply text-left mr-auto;
+    }
+
+    .content-flex.top {
+        @apply justify-start items-center;
+        @apply text-center mx-auto;
+    }
+
+    .content-flex.top-right {
+        @apply justify-start items-end;
+        @apply text-right ml-auto;
+    }
+
+    .content-flex.left {
+        @apply justify-center items-start;
+        @apply text-left mr-auto;
+    }
+
+    .content-flex.center {
+        @apply justify-center items-center;
+        @apply text-center mx-auto;
+    }
+
+    .content-flex.right {
+        @apply justify-center items-end;
+        @apply text-right ml-auto;
+    }
+
+    .content-flex.bottom-left {
+        @apply justify-end items-start;
+        @apply text-left mr-auto;
+    }
+
+    .content-flex.bottom {
+        @apply justify-end items-center;
+        @apply text-center mx-auto;
+    }
+
+    .content-flex.bottom-right {
+        @apply justify-end items-end;
+        @apply text-right ml-auto;
+    }
+
+}

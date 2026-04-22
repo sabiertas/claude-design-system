@@ -1,0 +1,9 @@
+/* file: components/custom.css */
+
+@layer components {
+
+  .eyebrow {
+      @apply border rounded-md py-1 px-3 text-sm uppercase;
+  }
+
+}

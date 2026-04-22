@@ -1,0 +1,10 @@
+/* file: utility/core/utilities.css */
+
+/* Transformaciones de espejo */
+@utility flip-w {
+    transform: scaleX(-1);
+}
+
+@utility flip-h {
+    transform: scaleY(-1);
+}

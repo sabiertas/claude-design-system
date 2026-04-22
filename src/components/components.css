@@ -1,0 +1,39 @@
+/* file: components.css */
+
+@layer components {
+	.bg-image {
+	  @apply absolute inset-0 size-full object-cover -z-1;
+	}
+
+	.click-parent {
+		outline: none !important;
+	}
+	  
+	.click-parent::after {
+		content: "";
+		position: absolute;
+		cursor: pointer;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	  
+	.focus-from-child {
+		position: relative;
+		transition: all 700ms !important;
+	}
+	  
+	.focus-from-child:focus-within {
+		box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+					0 4px 6px -2px rgba(0, 0, 0, 0.05);
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+		border-color: var(--color-neutral-300);
+	}
+
+	.focus-from-child:hover {
+		cursor: pointer;
+	}
+}
